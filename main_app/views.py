@@ -4,7 +4,6 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView, ListView
 from django.http import HttpResponse
 from django.urls import reverse, reverse_lazy
-from .forms import SignUpForm
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth import login
 # from .models import Profile, Post
@@ -26,7 +25,7 @@ class ProfileDetail(DetailView):
     template_name = 'profile_detail.html'
 
 class ProfileCreate(CreateView):
-    form_class = SignUpForm
+    form = UserCreationForm
     model = Profile
     fields = ['user_name', 'email', 'current_city', 'profile_picture']
     template_name = 'registration/profile_create.html'
