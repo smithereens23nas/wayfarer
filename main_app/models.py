@@ -4,9 +4,14 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+class City(models.Model):
+    name = models.CharField(max_length=30)
+    img = models.CharField(max_length=500)
+    description = models.TextField(max_length=500)
+
 class Post(models.Model):
     title =models.CharField(max_length=100)
-    city =models.CharField(max_length=30)
+    city =models.ManyToManyField(City)
     img = models.TextField(max_length=500, blank =True)
     body = models.TextField(max_length=300)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts")
@@ -19,7 +24,7 @@ class Post(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    Name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
     email = models.CharField(max_length=300, unique=True)
     city = models.ForeignKey(User, on_delete=models.CASCADE, related_name='cities')
     profile_picture =models.TextField(max_length=500, default ='https://i.pinimg.com/736x/cb/45/72/cb4572f19ab7505d552206ed5dfb3739.jpg')
@@ -30,11 +35,8 @@ class Profile(models.Model):
     class Meta:
         ordering = ['name']
 
-class City(models.Model):
-    name = models.CharField(max_length=30)
-    img = models.CharField(max_length=500)
-    description = models.TextField(max_length=500)
-    post = models.ManyToManyField(Post)
+
+    
 
 
 

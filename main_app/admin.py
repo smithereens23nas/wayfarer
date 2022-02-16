@@ -14,5 +14,5 @@ class ProfileAdmin(admin.ModelAdmin):
 # admin.site.register(models.Country)
 @admin.register(models.City)
 class CityAdmin(admin.ModelAdmin):
-    list_display = ['name', 'img', 'description','post']
+    list_display = ['name', 'img', 'description']
     ordering = ['name']
