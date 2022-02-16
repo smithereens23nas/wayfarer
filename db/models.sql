@@ -18,17 +18,17 @@ INSERT INTO main_app_post('title','city', 'img', 'body','author')
     VALUES('first post','Sao Paulo','https://assets.tivolihotels.com/image/upload/q_auto,f_auto/media/minor/tivoli/images/destination/saopaulo/thr_top_saopaulo_1920x1000.jpg','words words words','Michealangelo');
 
 INSERT INTO main_app_post('title','city', 'img', 'body','author')
-    VALUES('second post','New York','https://cdn.cheapoguides.com/wp-content/uploads/sites/3/2019/03/Osaka-castle-cherry-blosson-iStock-512491222.jpg','Florence, capital of Italy''s Tuscany region, is home to many masterpieces of Renaissance art and architecture. One of its most iconic sights is the Duomo, a cathedral with a terracotta-tiled dome engineered by Brunelleschi and a bell tower by Giotto. The Galleria dell''Accademia displays Michelangelo''s “David” sculpture. The Uffizi Gallery exhibits Botticelli''s “The Birth of Venus” and da Vinci''s “Annunciation.”','SamSmith');
+    VALUES('second post','New York','https://cdn.cheapoguides.com/wp-content/uploads/sites/3/2019/03/Osaka-castle-cherry-blosson-iStock-512491222.jpg','Florence, capital of Italy''s Tuscany region, is home to many masterpieces of Renaissance art and architecture. One of its most iconic sights is the Duomo, a cathedral with a terracotta-tiled dome engineered by Brunelleschi and a bell tower by Giotto. The Galleria dell''Accademia displays Michelangelo''s “David” sculpture. The Uffizi Gallery exhibits Botticelli''s “The Birth of Venus” and da Vinci''s “Annunciation.”','Donatello');
 
 INSERT INTO main_app_post('title','city', 'img', 'body','author')
     VALUES('other post','Sao Paulo','https://cdn.cheapoguides.com/wp-content/uploads/sites/3/2019/03/Osaka-castle-cherry-blosson-iStock-512491222.jpg','Venice, the capital of northern Italy''s Veneto region, is built on more than 100 small islands in a lagoon in the Adriatic Sea. It has no roads, just canals – including the Grand Canal thoroughfare – lined with Renaissance and Gothic palaces. The central square, Piazza San Marco, contains St. Mark''s Basilica, which is tiled with Byzantine mosaics, and the Campanile bell tower offering views of the city''s red roofs.','Raphael');
 
 INSERT INTO main_app_post('title','city', 'img', 'body','author')
-    VALUES('more post','Rio de Janiero','https://cdn.cheapoguides.com/wp-content/uploads/sites/3/2019/03/Osaka-castle-cherry-blosson-iStock-512491222.jpg','Tokyo, Japan''s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city''s many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).','NickSmith');
+    VALUES('more post','Rio de Janiero','https://cdn.cheapoguides.com/wp-content/uploads/sites/3/2019/03/Osaka-castle-cherry-blosson-iStock-512491222.jpg','Tokyo, Japan''s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples. The opulent Meiji Shinto Shrine is known for its towering gate and surrounding woods. The Imperial Palace sits amid large public gardens. The city''s many museums offer exhibits ranging from classical art (in the Tokyo National Museum) to a reconstructed kabuki theater (in the Edo-Tokyo Museum).','Leonardo');
 
 
 INSERT INTO main_app_profile(user, name, email, city, profile_pic)
-    VALUES('jimmy','fake_email','Kyoto','https://kyoto-amc.iafor.org/wp-content/uploads/sites/55/2017/01/The-Kyoto-Conference-on-Arts-Media-Culture-7.jpg',);
+    VALUES('jimmy','fake_email','Kyoto','https://kyoto-amc.iafor.org/wp-content/uploads/sites/55/2017/01/The-Kyoto-Conference-on-Arts-Media-Culture-7.jpg');
 INSERT INTO main_app_profile(user, name, email, city, profile_pic)
     VALUES('johny','anemail','Osaka','https://cdn.cheapoguides.com/wp-content/uploads/sites/3/2019/03/Osaka-castle-cherry-blosson-iStock-512491222.jpg');
 INSERT INTO main_app_profile(user, name, email, city, profile_pic)
