@@ -4,7 +4,11 @@ from . import models
 @admin.register(models.Post)
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = [ 'title','city','img','body','author']
+    fields = ['title', 'city', 'img', 'body', 'author']
+    list_display = [ 'title','get_city','img','body','author']
+    
+    def get_city(self, obj):
+        return "\n".join([c.city for c in obj.city.all()])
 
 @admin.register(models.Profile)
 class ProfileAdmin(admin.ModelAdmin):
