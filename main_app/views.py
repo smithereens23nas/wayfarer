@@ -57,6 +57,7 @@ class PostCreate(View):
         Post.objects.create(current_city=current_city, title=title, img=img, body=body, profile=profile)
         return redirect('profile_detail')
     
-
+# class LoginView(View):
+#     redirect('login.html')
 
 
