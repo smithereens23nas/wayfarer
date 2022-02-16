@@ -15,7 +15,7 @@ INSERT INTO main_app_city(name, img, description)
 
 
 INSERT INTO main_app_post('title','city', 'img', 'body','author')
-    VALUES('first post','https://assets.tivolihotels.com/image/upload/q_auto,f_auto/media/minor/tivoli/images/destination/saopaulo/thr_top_saopaulo_1920x1000.jpg','words words words','some guy in his mom''s basement');
+    VALUES('first post','Sao Paulo','https://assets.tivolihotels.com/image/upload/q_auto,f_auto/media/minor/tivoli/images/destination/saopaulo/thr_top_saopaulo_1920x1000.jpg','words words words','some guy in his mom''s basement');
 
 INSERT INTO main_app_post('title','city', 'img', 'body','author')
     VALUES('second post','New York','https://cdn.cheapoguides.com/wp-content/uploads/sites/3/2019/03/Osaka-castle-cherry-blosson-iStock-512491222.jpg','Florence, capital of Italy''s Tuscany region, is home to many masterpieces of Renaissance art and architecture. One of its most iconic sights is the Duomo, a cathedral with a terracotta-tiled dome engineered by Brunelleschi and a bell tower by Giotto. The Galleria dell''Accademia displays Michelangelo''s “David” sculpture. The Uffizi Gallery exhibits Botticelli''s “The Birth of Venus” and da Vinci''s “Annunciation.”','Sam');
