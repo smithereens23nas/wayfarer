@@ -51,3 +51,5 @@ class PostCreate(View):
         profile = Profile.objects.get(pk=pk)
         Post.objects.create(current_city=current_city, title=title, img=img, body=body, profile=profile)
         return redirect('profile_detail')
+
+
