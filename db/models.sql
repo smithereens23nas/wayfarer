@@ -1,3 +1,4 @@
+
 INSERT INTO main_app_city(name, img, description)
     VALUES('Miami','https://mmimageservice.azurewebsites.net/api/image/office/039','Miami, officially the City of Miami, is a coastal metropolis located in Miami-Dade County in southeastern Florida. With a population of 467,963 as of the 2020 census, it is the 44th-largest city in the United States and the core of the nation''s eighth-largest metropolitan area.','1');
 INSERT INTO main_app_city(name, img, description)
