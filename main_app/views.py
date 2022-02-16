@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.contrib.auth import login
-# from .models import Profile, Post
+from .models import Profile, Post, City
 
 
 # Create your views here.
@@ -18,6 +18,12 @@ class Home(ListView):
 class AddPostView(CreateView):
     model = Post
     template_name = 'addPost.html'
+    fields = '__all__'
+
+
+class PostList(ListView):
+    model = Post
+    template_name = 'post_list.html'
     fields = '__all__'
 
 class ProfileDetail(DetailView):
