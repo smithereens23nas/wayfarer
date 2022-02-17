@@ -129,10 +129,10 @@ img {
   border-radius: 5px;
 }
 
-.hero-img {
+/* .hero-img {
   width: 100%;
   height: 70%;
-}
+} */
 
 .hero-bottom {
   height: 100px;
@@ -142,8 +142,8 @@ img {
   background: center / cover no-repeat,
 linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url("https://images.squarespace-cdn.com/content/v1/5e0e65adcd39ed279a0402fd/1627422658456-7QKPXTNQ34W2OMBTESCJ/1.jpg?format=2500w");
-  /* width: 100%;
-  height: 100%; */
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
