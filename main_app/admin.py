@@ -12,7 +12,7 @@ class PostAdmin(admin.ModelAdmin):
 
 @admin.register(models.Profile)
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ['user_id','name','email','city','profile_picture']
+    list_display = ['user','name','email','city','profile_picture']
 
     
 # admin.site.register(models.Country)
