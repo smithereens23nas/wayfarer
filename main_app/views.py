@@ -14,12 +14,15 @@ from .models import Profile, Post, City
 class Home(ListView):
     model = City
     template_name = 'home.html'
-
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["cities"] = City.objects.all()
+        return context
 class AddPostView(CreateView):
     model = Post
     template_name = 'addPost.html'
     fields = '__all__'
-
+    
 
 class PostList(TemplateView):
     template_name = 'post_list.html'

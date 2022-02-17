@@ -113,3 +113,25 @@ img {
     position: absolute;
     top: 0;
 }
+
+.posts {
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 0.1fr 3fr 1fr;
+    border-radius: 5px;
+}
+
+.posts:hover {
+    background-color: hsla(0, 0%, 100%, 0.1);
+    cursor: pointer;
+}
+
+.posts {
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    /*  New Template Columns  */
+    grid-template-columns: 0.1fr 3fr 0.5fr 0.3fr;
+    border-radius: 5px;
+}
