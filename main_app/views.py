@@ -40,6 +40,13 @@ class PostList(TemplateView):
 class ProfileDetail(DetailView):
     model = Profile
     template_name = 'profile_detail.html'
+    def get_context_data(self, **kwargs): #what are kwargs??
+        context = super().get_context_data(**kwargs)
+        # author = kwargs['object']
+        name = self.request.GET.get('profile')
+        print(self.kwargs)        
+        context['posts'] = Post.objects.filter(author=self.kwargs['pk'])
+        return context
 
 class ProfileCreate(CreateView):
     form = UserCreationForm
