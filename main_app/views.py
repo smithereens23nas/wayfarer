@@ -12,7 +12,7 @@ from .models import Profile, Post, City
 # Create your views here.
 
 class Home(ListView):
-    model = Post
+    model = City
     template_name = 'home.html'
 
 class AddPostView(CreateView):
@@ -35,7 +35,7 @@ class PostList(TemplateView):
         return context
 
 class ProfileDetail(DetailView):
-    model = Profile, City
+    model = Profile
     template_name = 'profile_detail.html'
 
 class ProfileCreate(CreateView):
@@ -46,7 +46,6 @@ class ProfileCreate(CreateView):
     success_url = reverse_lazy('login')
 
 class ProfileEdit(UpdateView):
-    form_class = UserChangeForm
     model = Profile
     fields = ['user', 'name', 'email', 'city', 'profile_picture']
     template_name = 'profile_update.html'
