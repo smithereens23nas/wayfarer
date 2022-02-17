@@ -21,27 +21,35 @@ class AddPostView(CreateView):
     fields = '__all__'
 
 
-class PostList(ListView):
-    model = Post
+class PostList(TemplateView):
     template_name = 'post_list.html'
-    fields = '__all__'
+    def get_context_data(self, **kwargs): #what are kwargs??
+        context = super().get_context_data(**kwargs)
+        name = self.request.GET.get('name')
+        if name != None:
+            context['posts'] = Post.objects.filter(name__icontains=name)
+            context['header'] = f"Searching For {name}"
+        else:
+            context['posts'] = Post.objects.all()
+            context['header'] = "All Posts"
+        return context
 
 class ProfileDetail(DetailView):
-    model = Profile
+    model = Profile, City
     template_name = 'profile_detail.html'
 
 class ProfileCreate(CreateView):
     form = UserCreationForm
     model = Profile
-    fields = ['user_name', 'email', 'current_city', 'profile_picture']
-    template_name = 'registration/profile_create.html'
+    fields = ['user', 'name', 'email', 'city', 'profile_picture']
+    template_name = 'profile_create.html'
     success_url = reverse_lazy('login')
 
 class ProfileEdit(UpdateView):
     form_class = UserChangeForm
     model = Profile
-    fields = ['user_name', 'email', 'current_city', 'profile_picture']
-    template_name = 'registration/update_profile.html'
+    fields = ['user', 'name', 'email', 'city', 'profile_picture']
+    template_name = 'profile_update.html'
     success_url = reverse_lazy('home')
     
     def get_object(self):
@@ -49,12 +57,12 @@ class ProfileEdit(UpdateView):
 
 class PostCreate(View):
     def post(self, request, pk):
-        current_city = request.POST.get('current_city')
+        current_city = request.POST.get('city_id')
         title = request.POST.get('title')
         img = request.POST.get('img')
         body = request.POST.get('body')
         profile = Profile.objects.get(pk=pk)
-        Post.objects.create(current_city=current_city, title=title, img=img, body=body, profile=profile)
+        Post.objects.create(city_id=current_city, title=title, img=img, body=body, profile=profile)
         return redirect('profile_detail')
     
 # class LoginView(View):

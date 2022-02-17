@@ -10,8 +10,8 @@ class City(models.Model):
     description = models.TextField(max_length=500)
 
 class Post(models.Model):
-    title =models.CharField(max_length=100)
-    city =models.ManyToManyField(City)
+    title = models.CharField(max_length=100)
+    city_id = models.ManyToManyField(City)
     img = models.TextField(max_length=500, blank =True)
     body = models.TextField(max_length=300)
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="posts")
