@@ -82,6 +82,13 @@ class PostCreate(View):
         Post.objects.create(city_id=current_city, title=title, img=img, body=body, profile=profile)
         return redirect('profile_detail')
     
+
+class PostDelete(DeleteView):
+    model = Post
+    template_name = 'post_delete.html'
+    success_url = '/posts/'
+
+
 # class LoginView(View):
 #     redirect('login.html')
 
