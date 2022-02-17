@@ -1,28 +1,21 @@
-{% extends 'base.html' %} 
+{% extends 'base_home.html' %}
 {% block content %}
-<div class="home__playlists">
-    {% for city in cities %}
+<div class="home-page hero is-large image is-16by9">
+    <div class="hero-img">
 
-        <div class="playlist mb-5">
-            <h3 class="title is-3 has-text-success">{{city.name}}</h3>
-            <hr />
-            {% for post in post.cities.all %}
-
-            <div class="posts">
-                <span>{{forloop.counter}}</span>
-                <span><b>{{post.title}}</b></span>
-                <span><b>{{post.img}}</b></span>
-                <span><b>{{post.body}}</b></span>
-                <span><b>{{post.author}}</b></span>
-               
-                <!--   Here we are creating an anchor
-                tag that when clicked will hit our new
-                route and send a query to remove the song     -->
-                
-              </div>
-
-                {% endfor %}
-            {% endfor %}
-        </div>
     </div>
+    <div id="home-text">
+        <h1>EXPLORE THE WORLD</h1>
+        <p>Providing the inspiration and tools to make your travel dreams become a beautiful reality. The world awaits your exploration. May you wander in wonder and live the extraordinary.</p>
+
+        <button class=" button is-dark"> <a class="explore-btn" href="main_app/templates/post_list.html">Explore More</a></button>
+
+    </div>
+</div>
+<div>
+    <img class="hero-bottom" src="" alt="">
+    <img class="hero-bottom" src="" alt="">
+    <img class="hero-bottom" src="" alt="">
+    <img class="hero-bottom" src="" alt="">
+</div>
 {% endblock %}

@@ -1,12 +1,28 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'base.html' %} 
+{% block content %}
+<div class="home__playlists">
+    {% for city in cities %}
 
-<h1>Post</h1>
-<ul>
-{% for post in posts %}
+        <div class="playlist mb-5">
+            <h3 class="title is-3 has-text-success">{{city.name}}</h3>
+            <hr />
+            {% for post in post.cities.all %}
 
-    <li>{{ post.title }} - {{post.author}}<br/>
-    {{ post.author }}</li>
-    {{ post.body }}
-{% endfor %}
+            <div class="posts">
+                <span>{{forloop.counter}}</span>
+                <span><b>{{post.title}}</b></span>
+                <span><b>{{post.img}}</b></span>
+                <span><b>{{post.body}}</b></span>
+                <span><b>{{post.author}}</b></span>
+               
+                <!--   Here we are creating an anchor
+                tag that when clicked will hit our new
+                route and send a query to remove the song     -->
+                
+              </div>
+
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
 {% endblock %}
-</ul>
