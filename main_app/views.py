@@ -68,9 +68,9 @@ class ProfileEdit(UpdateView):
 class ProfileDelete(DeleteView):
     model = Profile
     template_name = 'profile_delete.html'
-    success_url = '/profile/'
+    success_url = '/posts/'
 
-    
+
 
 class PostCreate(View):
     def post(self, request, pk):
