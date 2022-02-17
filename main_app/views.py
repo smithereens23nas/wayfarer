@@ -64,6 +64,14 @@ class ProfileEdit(UpdateView):
     def get_object(self):
         return self.request.user
 
+
+class ProfileDelete(DeleteView):
+    model = Profile
+    template_name = 'profile_delete.html'
+    success_url = '/profile/'
+
+    
+
 class PostCreate(View):
     def post(self, request, pk):
         current_city = request.POST.get('city_id')
