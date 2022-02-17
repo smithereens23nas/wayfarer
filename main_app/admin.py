@@ -4,7 +4,7 @@ from . import models
 @admin.register(models.Post)
 
 class PostAdmin(admin.ModelAdmin):
-    fields = ['title', 'city', 'img', 'body', 'author']
+    fields = ['title', 'cities', 'img', 'body', 'author']
     list_display = [ 'title','get_city','img','body','author']
     
     def get_city(self, obj):
