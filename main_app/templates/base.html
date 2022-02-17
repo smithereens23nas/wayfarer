@@ -26,8 +26,8 @@
                 </a>
             </div>
             <div class="navbar-menu navbar-start">
-                <a class="navbar-item" href="/about">About</a>
-                <a class="navbar-item" href="/explore">Explore</a>
+                <a class="navbar-item" href="/profile/<int:pk>">Profile</a>
+                <a class="navbar-item" href="/cities">Cities</a>
             </div>
             <div class="navbar-menu navbar-end">
                 {% if user.is_authenticated %}
