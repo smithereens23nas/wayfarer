@@ -17,14 +17,22 @@
             <div class="d-flex align-items-center justify-content-between mb-3">
                 <h5 class="mb-0">Recent posts</h5>
             </div>
-            <div class="row">
-                <div class=></div>
-                <div class=></div>
-                <div class=></div>
-                <div class=></div>
-            </div>
+            <div class="profile_posts">
+              <hr />
+              {% for post in post.author %}
+  
+              <div class="posts">
+                <span>{{forloop.counter}}</span>
+                <span><b>{{post.title}}</b></span>
+                <span><b>{{post.img}}</b></span>
+                <span><b>{{post.body}}</b></span>
+                <span><b>{{post.author}}</b></span>  
+              </div>
+  
+                  {% endfor %}
+              {% endfor %}
+          </div>
         </div>
-        </div>
-  </div>
+    </div>
 </div>
 {% endblock %}
