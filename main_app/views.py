@@ -89,6 +89,12 @@ class PostDelete(DeleteView):
     success_url = '/posts/'
 
 
+class PostEdit(UpdateView):
+    model = Post
+    fields = ['title', 'city', 'img', 'body', 'author' ]
+    template_name = 'post_update.html'
+    success_url = '/posts/'
+
 # class LoginView(View):
 #     redirect('login.html')
 
