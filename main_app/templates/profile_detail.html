@@ -12,12 +12,12 @@
                 <div class="buttons">
                   <a href="{% url 'profile_update' profile.pk %}" class="button is-outline">
                         <span class="icon">
-                            <i class="fas fa-edit"></i>
+                            
                         </span>Edit Profile
                       </a>
-                    </a href="{% url 'profile_delete' profile.pk %}" class="button is-outline">
-                        <span class="icon ">
-                            <i class="fas fa-trash-alt"></i>
+                    <a href="{% url 'profile_delete' profile.pk %}" class="button is-outline">
+                        <span class="icon">
+                            
                         </span>Delete Profile
                     </a>
                 </div>
@@ -40,7 +40,6 @@
                                     <span>No.{{forloop.counter}}</span>
                             <span><b>{{post.title}}</b> by : {{post.author}}</span>
                             <div>{{post.body}}</div>
-                           
                                   </div>
                                 </div>
                               </div>

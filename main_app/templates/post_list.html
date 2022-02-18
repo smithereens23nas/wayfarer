@@ -6,21 +6,27 @@
 
         <div class="playlist mb-5">
             
-              <div class="container">
+              <div class="column is-half">
                 
                       <div class="card small">
                         <div class="card-image">
                           <figure class="image is-16by9">
                             <img src="{{post.img}}" alt="post.title">
-                          </figure>
+                        </figure>
                         </div>
                         <div class="card-content">
-                          
-                          <div class="content">
+                        
+                        <div class="content">
                             <span>No.{{forloop.counter}}</span>
-                    <span><b>{{post.title}}</b> by : {{post.author}}</span>
-                    <div>{{post.body}}</div>
-                    <div></div>
+                            <span><b>{{post.title}}</b> by : {{post.author}}</span>
+                            <div>{{post.body}}</div>
+                            
+                            <span class="icon">
+                                <i class="fas fa-edit"></i>
+                            </span>
+                            <span class="icon">
+                                <i class="fas fa-trash-alt"></i>
+                            </span>
                           </div>
                         </div>
                       </div>
