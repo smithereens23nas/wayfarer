@@ -6,11 +6,11 @@
 
         <div class="playlist mb-5">
             
-              <div class="column is-half">
+            <div class="column is-half">
                 
-                      <div class="card small">
-                        <div class="card-image">
-                          <figure class="image is-16by9">
+                <div class="card small">
+                    <div class="card-image">
+                        <figure class="image is-16by9">
                             <img src="{{post.img}}" alt="post.title">
                         </figure>
                         </div>
@@ -19,15 +19,20 @@
                         <div class="content">
                             <span>No.{{forloop.counter}}</span>
                             <span><b>{{post.title}}</b> by : {{post.author}}</span>
-                            <div>{{post.body}}</div>
+                            <div>{{post.body}}</div><div class="buttons">
+                                
+                                      <span class="icon">
+                                        <i class="fas fa-edit"></i>
+                                      </span>Edit Profile
+                                    </a>
+                                    <a href="{% url 'delete_post' %}" class="button is-outline">
+                                      <span class="icon">
+                                        <i class="fas fa-trash-alt"></i>  
+                                      </span>
+                                  </a>
+                              </div>
                             
-                            <span class="icon">
-                                <i class="fas fa-edit"></i>
-                            </span>
-                            <span class="icon">
-                                <i class="fas fa-trash-alt"></i>
-                            </span>
-                          </div>
+                        </div>
                         </div>
                       </div>
                     </div>
