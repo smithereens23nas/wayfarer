@@ -26,7 +26,7 @@
                 </a>
             </div>
             <div class="navbar-menu navbar-start">
-                <a class="navbar-item nav-decoration" href="/profile/<int:pk>">Profile</a>
+                <a class="navbar-item nav-decoration" href="{% url 'profile_detail' user.pk %}">Profile</a>
             </div>
             <div class="navbar-menu navbar-end">
                 {% if user.is_authenticated %}

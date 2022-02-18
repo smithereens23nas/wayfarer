@@ -2,9 +2,9 @@
 {% block content %}
 
 
-              <div class="media ">
+              <figure class="hero">
                 <img src="{{profile.profile_picture}}" alt="{{profile.user}}" />
-            </div>
+            </figure>
             <div class="tile">
                 <h1 class="title_name ">Hello {{profile.name}}</h1>
             </div>
@@ -24,7 +24,7 @@
             
                     {% for post in profile.user.posts.all %}
                     
-                    <div class="playlist mb-5">
+                    <div class="gallery">
             
                       <div class="column is-half">
                         

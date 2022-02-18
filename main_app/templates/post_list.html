@@ -1,15 +1,15 @@
 {% extends 'base.html' %} 
 {% block content %}
 <h1>All Posts</h1>
-<div class="home__playlists">
+
     {% for post in posts %}
 
-        <div class="playlist mb-5">
+        <div class="gallery ">
             
             <div class="column is-half">
                 
                 <div class="card small">
-                    <div class="card-image">
+                    <div class="card-image ">
                         <figure class="image is-16by9">
                             <img src="{{post.img}}" alt="post.title">
                         </figure>
@@ -19,27 +19,36 @@
                         <div class="content">
                             <span>No.{{forloop.counter}}</span>
                             <span><b>{{post.title}}</b> by : {{post.author}}</span>
-                            <div>{{post.body}}</div><div class="buttons">
-                                
-                                      <span class="icon">
-                                        <i class="fas fa-edit"></i>
-                                      </span>Edit Profile
-                                    </a>
-                                    <a href="{% url 'delete_post' %}" class="button is-outline">
-                                      <span class="icon">
-                                        <i class="fas fa-trash-alt"></i>  
-                                      </span>
-                                  </a>
-                              </div>
+                            <div>{{post.body}}</div>
+                                    <div class="buttons">
+
+                                        <a href="{% url 'edit_post' %}" class="button is-outline">
+                                            <span class="icon">    
+                                            <i class="fas fa-edit"> </i>
+                                        </span>
+                                        </a>
+                                    
+                                    
+                                    
+                                    <span class="icon">
+                                        <a href="{% url 'delete_post' %}" class="button is-outline">
+                                            <span class="icon">
+                                                <i class="fas fa-trash-alt"></i> 
+                                            </span>
+                            
+                                    </a> 
+                                    </span>
+
+                            </div>
                             
                         </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
+                    </div>
                 </div>
-              
-   
+                
+
+
             {% endfor %}
         </div>
     </div>
