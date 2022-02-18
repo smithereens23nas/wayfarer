@@ -26,7 +26,8 @@
                 </a>
             </div>
             <div class="navbar-menu navbar-start">
-                <a class="navbar-item nav-decoration" href="">Profile</a>
+                
+                <a class="navbar-item nav-decoration" href="{% url 'profile_detail' user.pk %}">Profile</a>
                 <a class="navbar-item nav-decoration" href="/posts">Posts</a>
             </div>
             <div class="navbar-menu navbar-end">
