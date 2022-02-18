@@ -19,17 +19,26 @@
                         <div class="content">
                             <span>No.{{forloop.counter}}</span>
                             <span><b>{{post.title}}</b> by : {{post.author}}</span>
-                            <div>{{post.body}}</div><div class="buttons">
-                                
+                            <div>{{post.body}}</div>
+                                    <div class="buttons">
+                                       
+                                        <a href="{% url 'edit_post' %}" class="button is-outline">
+                                            <span class="icon">    
+                                            <i class="fas fa-edit"> </i>
+                                        </span>
+                                        </a>
+                                      
+                                    
+                                    
                                       <span class="icon">
-                                        <i class="fas fa-edit"></i>
-                                      </span>Edit Profile
-                                    </a>
-                                    <a href="{% url 'delete_post' %}" class="button is-outline">
-                                      <span class="icon">
-                                        <i class="fas fa-trash-alt"></i>  
+                                        <a href="{% url 'delete_post' %}" class="button is-outline">
+                                            <span class="icon">
+                                                <i class="fas fa-trash-alt"></i> 
+                                            </span>
+                            
+                                    </a> 
                                       </span>
-                                  </a>
+                                  
                               </div>
                             
                         </div>
