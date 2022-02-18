@@ -25,11 +25,23 @@
                     <span aria-hidden="true"></span>
                 </a>
             </div>
+            
             <div class="navbar-menu navbar-start">
-                
-                <a class="navbar-item nav-decoration" href="{% url 'profile_detail' user.pk %}">Profile</a>
-                <a class="navbar-item nav-decoration" href="/posts">Posts</a>
+                {% if user.is_authenticated %}
+                    <div class="navbar-menu navbar-start">
+                        <a class="navbar-item nav-decoration" href="{% url 'profile_detail' user.pk %}">Profile</a>
+                        <a class="navbar-item nav-decoration" href="/posts">Posts</a>
+                    </div>
+                {%else%}
+                    <div class="navbar-menu navbar-start">
+                        <a class="navbar-item nav-decoration" ></a>
+                        <a class="navbar-item nav-decoration" ></a>
+                    </div>
+                {% endif %}
             </div>
+            
+            
+            
             <div class="navbar-menu navbar-end">
                 {% if user.is_authenticated %}
                     <div class="navbar-menu navbar-end">
