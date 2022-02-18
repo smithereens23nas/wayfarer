@@ -93,8 +93,7 @@ class PostEdit(UpdateView):
     model = Post
     fields = ['title', 'city', 'img', 'body', 'author' ]
     template_name = 'post_update.html'
-    success_url = '/posts/'
-
+    success_url = reverse_lazy('post_list')
 # class LoginView(View):
 #     redirect('login.html')
 
