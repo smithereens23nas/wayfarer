@@ -16,7 +16,7 @@ class Post(models.Model):
     cities = models.ManyToManyField(City)
     img = models.TextField(max_length=500, blank =True)
     body = models.TextField(max_length=300)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='posts')
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
