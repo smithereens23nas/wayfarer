@@ -1,35 +1,60 @@
 {% extends 'base.html' %} 
 {% block content %}
-<div class="row py-5 px-4">
-  <div class="col-md-5 mx-auto">
-    <!-- Profile widget -->
-    <div class="bg-white shadow rounded overflow-hidden">
-          <div class="px-4 pt-0 pb-4 cover">
-            <div class="media align-items-end profile-head">
-              <div class="profile mr-3"><img src="{{profile.img}}" alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="#" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
-                  <div class="media-body mb-5 text-white">
-                    <h4 class="mt-0 mb-0">{{profile.name}}</h4>
-                    <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>{{profile.city}}</p>
-                  </div>
-                </div>
-              </div>
-              
-          <div class="py-4 px-4">
-            <div class="d-flex align-items-center justify-content-between mb-3">
-                <h5 class="mb-0">Recent posts</h5>
+
+
+              <div class="media ">
+                <img src="{{profile.profile_picture}}" alt="{{profile.user}}" />
             </div>
-            <div class="profile_posts">
-              <hr />
-              {% for post in posts.all %}
-  
-              <div class="posts">
-                <span>{{forloop.counter}}</span>
-                <span><b>{{post.title}}</b></span>
-                <img src="{{post.img}}" />
-                <span><b>{{post.body}}</b></span>
-                <span><b>{{post.author}}</b></span>  
-              </div>
-  
+            <div class="tile">
+                <h1 class="title_name ">Hello {{profile.name}}</h1>
+            </div>
+            <div class="detail__box ">
+                <div class="buttons">
+                  <a href="{% url 'profile_update' profile.pk %}" class="button is-outline">
+                        <span class="icon">
+                            <i class="fas fa-edit"></i>
+                        </span>Edit Profile
+                      </a>
+                    </a href="{% url 'profile_delete' profile.pk %}" class="button is-outline">
+                        <span class="icon ">
+                            <i class="fas fa-trash-alt"></i>
+                        </span>Delete Profile
+                    </a>
+                </div>
+            
+                    {% for post in profile.user.posts.all %}
+                    
+                    <div class="playlist mb-5">
+            
+                      <div class="column is-half">
+                        
+                              <div class="card small ">
+                                <div class="card-image">
+                                  <figure class="image is-16by9">
+                                    <img src="{{post.img}}" alt="post.title">
+                                  </figure>
+                                </div>
+                                <div class="card-content">
+                                  
+                                  <div class="content">
+                                    <span>No.{{forloop.counter}}</span>
+                            <span><b>{{post.title}}</b> by : {{post.author}}</span>
+                            <div>{{post.body}}</div>
+                           
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      <!-- <div>{{post}}</div> -->
+                        {% empty %}
+                    <article class="message is-black">
+                    <div class="message-header">
+                        <p>No posts listed</p>
+                    </div>
+                </div>
+                    
+                
                   {% endfor %}
            
           </div>
